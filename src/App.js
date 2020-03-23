@@ -91,7 +91,7 @@ class App extends React.Component {
                 <Row className="top-header">
                   <Col span={24} offset={0}>
                     <Title style={{ float: "left", color: "white" }} level={4}>
-                      SaveOurFaves
+                      SaveOurFaves<span style={{ color: "#FBAD26" }}>Erie</span>
                     </Title>
                     <div style={{ float: "right" }}>
                       <a href="#">
@@ -128,7 +128,7 @@ class App extends React.Component {
                     level={1}
                     style={{ color: "white", textAlign: "center" }}
                   >
-                    Your favorite Bay Area restaurant might close forever. Help
+                    Your favorite Erie restaurant might close forever. Help
                     save it.
                   </Title>
                   <div className="header-sans">
