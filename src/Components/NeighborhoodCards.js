@@ -16,10 +16,7 @@ function AreaDropdown(props) {
         props.updateArea(newArea);
       }}
     >
-      <option value="sf">San Francisco</option>
-      <option value="eastbay">East Bay</option>
-      <option value="marin">Marin</option>
-      <option value="southbay">South Bay</option>
+      <option value="erie">Erie</option>
     </select>
   );
 }
@@ -48,6 +45,7 @@ export class NeighborhoodCards extends React.Component {
       }
     }
     const neighborhoods = Neighborhoods[area];
+    console.log(Neighborhoods, area);
     const firstBatch = neighborhoods.slice(0, 6);
     const rest = neighborhoods.slice(6);
     shuffleArray(rest);
