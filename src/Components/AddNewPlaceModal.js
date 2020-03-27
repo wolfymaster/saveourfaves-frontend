@@ -99,8 +99,8 @@ export function AddNewPlaceModal(props) {
             inputClassName={"add-link-modal-input"}
             autocompletionRequest={{
               types: ["establishment"],
-              location: { lat: 37.2865732484, lng: -121.8287260832 },
-              radius: 5000,
+              location: { lat: 42.1292, lng: -80.0851 },
+              radius: 25,
               componentRestrictions: {
                 country: "us"
               }

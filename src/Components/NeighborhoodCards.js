@@ -16,7 +16,12 @@ function AreaDropdown(props) {
         props.updateArea(newArea);
       }}
     >
+      <option value="corry">Corry</option>
       <option value="erie">Erie</option>
+      <option value="fairview">Fairview</option>
+      <option value="girard">Girard</option>
+      <option value="harborcreek">Harborcreek</option>
+      <option value="northeast">North East</option>
     </select>
   );
 }
@@ -45,7 +50,6 @@ export class NeighborhoodCards extends React.Component {
       }
     }
     const neighborhoods = Neighborhoods[area];
-    console.log(Neighborhoods, area);
     const firstBatch = neighborhoods.slice(0, 6);
     const rest = neighborhoods.slice(6);
     shuffleArray(rest);
@@ -87,6 +91,9 @@ export class NeighborhoodCards extends React.Component {
         }
       })
       .then(response => {
+        if(response.data.error) {
+          throw new Error(response.data.error);
+        }
         const suggestions = response.data.suggestedPlaces;
         const moreAvailable = response.data.moreAvailable;
         const merged = (this.state.suggestedPlaces || []).concat(suggestions);
